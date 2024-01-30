@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+
+<body>
+    <h1>Index Page</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis beatae nostrum earum
+        ducimus, error dolorum blanditiis cupiditate nihil, officiis repudiandae iusto perspiciatis eos asperiores
+        temporibus dignissimos fuga impedit minima?</p>
+    <hr>
+    <a href="/">Index</a>
+    <a href="/about">About</a>
+    <a href="/form">Form</a>
+    <br>
+    <!-- view value by key -->
+    <h1>สวัสดี : {{ firstName }}</h1> 
+    <h2>คุณอายุ : {{ age }} ปี</h2>
+
+    <!-- condition -->
+    {% if age >= 30 %}
+        <h3> คุณอายุมากกว่า 30 ปี</h3>
+    {% else %}
+        <h3> คุณอายุน้อยกว่า 30 ปี</h3>
+    {% endif %}
+
+    <!-- filter -->
+    <!-- upper -->
+    <h1>สวัสดี : {{ firstName | upper }}</h1> 
+    <!-- lower -->
+    <h1>สวัสดี : {{ firstName | lower }}</h1> 
+    <!-- worldcount -->
+    <h1>สวัสดี : {{ firstName | wordcount }}</h1> 
+
+</body>
+
+</html>
