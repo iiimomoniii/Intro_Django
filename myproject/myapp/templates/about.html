@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- use base structure for header and footer-->
+{% extends "main.html" %}
+<!-- space for about page title-->
+{% block title %}
     <title>About Page</title>
-</head>
-<body>
-        <h1>About Page</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis beatae nostrum earum ducimus, error dolorum blanditiis cupiditate nihil, officiis repudiandae iusto perspiciatis eos asperiores temporibus dignissimos fuga impedit minima?</p>
-     
-    </body>
-</html>
+{% endblock %}
+
+<!-- space for about page content-->
+{% block content %}
+    <h1>About Page</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis beatae nostrum earum ducimus, error dolorum blanditiis cupiditate nihil, officiis repudiandae iusto perspiciatis eos asperiores temporibus dignissimos fuga impedit minima?</p>
+{% endblock %}
+   

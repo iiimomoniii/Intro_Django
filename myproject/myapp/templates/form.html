@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Page</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!-- use base structure for header and footer-->
+{% extends "main.html" %} 
+<!-- space for form page title-->
+{% block title %}
+    <title>Form Page </title>
+{% endblock %}
+
+<!-- space for form page content-->
+{% block content %}
+    <h1>Form Page</h1>
+    <p>แบบฟอร์ม</p>
+{% endblock %}
