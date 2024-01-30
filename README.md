@@ -13,22 +13,24 @@ response -> Template (*.html) => View (views.py) => Chrome
 
 pip install django
 
-# create project
+# 1 create project
 django-admin startproject <project-name>
 django-admin startproject myproject
 
-# start project
+# 2 start project
 cd ../BasicTutorial/myproject
 python manage.py runserver
 
-# view
+# 3 view
 http://127.0.0.1:8000
 
 
-# create AppLevel
+# 4 create AppLevel
 python manage.py startapp <app-name>
 python manage.py startapp myapp
 
-# register app to project
+# 5 register app to project
 
-# import urls of AppLevel
+# 6 import urls of AppLevel
+
+# 7 create model
