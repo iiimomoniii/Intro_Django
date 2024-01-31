@@ -46,3 +46,9 @@ def form(request):
         return redirect("/")
     else :
         return render(request,"form.html")
+    
+
+def edit(request,person_id):
+    #get data from person_id
+    person = Person.objects.get(id=person_id)
+    return render(request,"edit.html",{"person":person})
