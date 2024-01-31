@@ -63,3 +63,11 @@ def edit(request,person_id):
         #get data from person_id
         person = Person.objects.get(id=person_id)
         return render(request,"edit.html",{"person":person})
+    
+def delete(request,person_id):
+    person = Person.objects.get(id=person_id)
+    person.delete()
+    #message
+    messages.success(request,"ลบข้อมูลเรียบร้อย")
+    # redirect
+    return redirect("/")
