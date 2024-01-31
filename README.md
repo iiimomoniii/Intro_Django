@@ -35,3 +35,4 @@ python manage.py startapp myapp
 
 ### 7 create model
 python manage.py makemigrations
+python manage.py migrate
