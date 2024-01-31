@@ -36,6 +36,14 @@
     {% endfor %} -->
 
     <h2 class="text-center">ข้อมูลประชากรทั้งหมด</h2>
+      <!--message success-->
+      {% if messages %}
+        {% for message in  messages%}
+        <div class="alert alert-success" role="alert">
+          <strong>{{message}}</strong>
+        </div>
+        {% endfor %}
+      {% endif %}
     <!-- view datatable -->
     <table class="table">
         <thead>
