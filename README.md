@@ -34,3 +34,4 @@ python manage.py startapp myapp
 # 6 import urls of AppLevel
 
 # 7 create model
+python manage.py makemigrations
