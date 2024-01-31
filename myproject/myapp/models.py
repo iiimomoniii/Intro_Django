@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# create model
 
 #Person = Table in DB
 class Person(models.Model):
