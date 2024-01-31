@@ -8,7 +8,8 @@
 <!-- space for form page content-->
 {% block content %}
     <h2 class="text-center">แบบฟอร์มประชากร</h2>
-    <form action="">
+    <form method="post" action="form">
+        {% csrf_token %}
         <div class="form-group">
             <label for="name">ชื่อประชากร</label>
             <input type="text" name="name" class="form-control">

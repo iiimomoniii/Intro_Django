@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from myapp.models import Person
 
@@ -22,5 +22,24 @@ def about(request):
 #     return HttpResponse("From form")
 
 #Reponse with Template
+# def form(request):
+#     return render(request,"form.html")
+
+#Reponse Model
 def form(request):
-    return render(request,"form.html")
+    if request.method == "POST":
+        #display value
+        name = request.POST["name"]
+        age = request.POST["age"]
+
+        #save
+        person = Person.objects.create(
+            name=name,
+            age=age   
+        )
+        person.save()
+
+        # redirect
+        return redirect("/")
+    else :
+        return render(request,"form.html")
