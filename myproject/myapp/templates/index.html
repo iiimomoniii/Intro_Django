@@ -12,23 +12,29 @@
         temporibus dignissimos fuga impedit minima?</p>
     <br>
     <!-- view value by key -->
-    <h1>สวัสดี : {{ firstName }}</h1> 
-    <h2>คุณอายุ : {{ age }} ปี</h2>
+    <!-- <h1>สวัสดี : {{ firstName }}</h1> 
+    <h2>คุณอายุ : {{ age }} ปี</h2> -->
 
     <!-- condition -->
-    {% if age >= 30 %}
+    <!-- {% if age >= 30 %}
         <h3> คุณอายุมากกว่า 30 ปี</h3>
     {% else %}
         <h3> คุณอายุน้อยกว่า 30 ปี</h3>
-    {% endif %}
+    {% endif %} -->
 
     <!-- filter -->
     <!-- upper -->
-    <h1>สวัสดี : {{ firstName | upper }}</h1> 
+    <!-- <h1>สวัสดี : {{ firstName | upper }}</h1>  -->
     <!-- lower -->
-    <h1>สวัสดี : {{ firstName | lower }}</h1> 
+    <!-- <h1>สวัสดี : {{ firstName | lower }}</h1>  -->
     <!-- worldcount -->
-    <h1>สวัสดี : {{ firstName | wordcount }}</h1> 
+    <!-- <h1>สวัสดี : {{ firstName | wordcount }}</h1>  -->
+
+    <!-- view data in object model -->
+    {% for person in all_person %}
+        {{ person.name }} {{ person.age }}<br />
+    {% endfor %}
+
 {% endblock %}
 
    
