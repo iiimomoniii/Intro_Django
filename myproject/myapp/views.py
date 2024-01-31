@@ -49,6 +49,17 @@ def form(request):
     
 
 def edit(request,person_id):
-    #get data from person_id
-    person = Person.objects.get(id=person_id)
-    return render(request,"edit.html",{"person":person})
+    if request.method == "POST":
+        person = Person.objects.get(id=person_id)
+        person.name = request.POST["name"]
+        person.age = request.POST["age"]
+        person.save()
+        #message
+        messages.success(request,"บันทึกข้อมูลที่แก้ไขเรียบร้อย")    
+
+        # redirect
+        return redirect("/")
+    else:
+        #get data from person_id
+        person = Person.objects.get(id=person_id)
+        return render(request,"edit.html",{"person":person})
