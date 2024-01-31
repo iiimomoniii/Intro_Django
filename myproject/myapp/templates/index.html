@@ -7,9 +7,9 @@
 
 <!-- space for index page content-->
 {% block content %}
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis beatae nostrum earum
+    <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis beatae nostrum earum
         ducimus, error dolorum blanditiis cupiditate nihil, officiis repudiandae iusto perspiciatis eos asperiores
-        temporibus dignissimos fuga impedit minima?</p>
+        temporibus dignissimos fuga impedit minima?</p> -->
     <br>
     <!-- view value by key -->
     <!-- <h1>สวัสดี : {{ firstName }}</h1> 
@@ -31,9 +31,34 @@
     <!-- <h1>สวัสดี : {{ firstName | wordcount }}</h1>  -->
 
     <!-- view data in object model -->
-    {% for person in all_person %}
+    <!-- {% for person in all_person %}
         {{ person.name }} {{ person.age }}<br />
-    {% endfor %}
+    {% endfor %} -->
+
+    <h2 class="text-center">ข้อมูลประชากรทั้งหมด</h2>
+    <!-- view datatable -->
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">รหัสประชากร</th>
+            <th scope="col">ชื่อ</th>
+            <th scope="col">อายุ</th>
+            <th scope="col">แก้ไข</th>
+            <th scope="col">ลบ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in all_person %}
+            <tr>
+                <th>{{ person.id }}</th>
+                <td>{{ person.name }}</td>
+                <td>{{ person.age }}</td>
+                <td><a href="#" class="btn btn-warning">แก้ไข</a></td>
+                <td><a href="#" class="btn btn-danger">ลบ</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
 
 {% endblock %}
 
